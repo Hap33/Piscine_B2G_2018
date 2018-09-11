@@ -580,6 +580,11 @@ Prefab:
       propertyPath: ObjectsToActivate.Array.data[2]
       value: 
       objectReference: {fileID: 683228614}
+    - target: {fileID: 114026108920542752, guid: 18adf0ff98783244fbe6944a19260b95,
+        type: 2}
+      propertyPath: ExitDoor
+      value: 
+      objectReference: {fileID: 784437125}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18adf0ff98783244fbe6944a19260b95, type: 2}
   m_IsPrefabAsset: 0
