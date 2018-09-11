@@ -7,6 +7,7 @@ TagManager:
   - Object
   - Death
   - Exit
+  - Water
   layers:
   - Default
   - TransparentFX
