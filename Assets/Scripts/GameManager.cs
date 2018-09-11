@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager Singleton;
     public int ObjectTotal;
-    public int ObjectIHave;
-    public GameObject Exit;
+    public int ObjectsCollected;
+    public GameObject ExitDoor;
     public GameObject Ethan;
     public GameObject EthanSpawn;
-    public GameObject[] ObjectsToActivate;
+    public GameObject[] AllCollectibles;
 
     private void Awake()
     {
@@ -25,31 +25,48 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void Rebirth()
+    private void Start()
     {
-        for (int i = 0; i < ObjectsToActivate.Length; i++)
+        ExitDoor.SetActive(false);
+    }
+
+    public void Respawn()
+    {
+        //Deactive all collectibles
+        for (int i = 0; i < AllCollectibles.Length; i++)
         {
-            ObjectsToActivate[i].SetActive(true); 
+            AllCollectibles[i].SetActive(true); 
         }
+
+        //Reset Ethan position and velocity, reset the count of collectibles
         Ethan.transform.position = EthanSpawn.transform.position;
         Ethan.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        ObjectIHave = 0;
-        Exit.SetActive(false);
+        ObjectsCollected = 0;
+
+        //Deactivate the exit door
+        ExitDoor.SetActive(false);
     }
 
-    public void RemoveObject (GameObject whatToDeactivate)
+    public void RemoveObject (GameObject objectToRemove)
     {
-        whatToDeactivate.SetActive(false);
-        ObjectIHave += 1;
-        if (ObjectIHave == ObjectTotal)
+        objectToRemove.SetActive(false);
+        ObjectsCollected += 1;
+
+        //Opens the door once all objects are collected
+        if (ObjectsCollected == ObjectTotal)
         {
-            Exit.SetActive(true);
+            ExitDoor.SetActive(true);
         }
     }
 
-    public void NextScene()
+    public void LoadNextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }
         

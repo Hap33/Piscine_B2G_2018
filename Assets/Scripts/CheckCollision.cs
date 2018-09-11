@@ -11,14 +11,14 @@ public class CheckCollision : MonoBehaviour {
                 GameManager.Singleton.RemoveObject(col.gameObject);
                 break;
             case "Death":
-                GameManager.Singleton.Rebirth();
+                GameManager.Singleton.Respawn();
                 break;
             case "Exit":
-                GameManager.Singleton.NextScene();
+                GameManager.Singleton.LoadNextScene();
                 break;
         }
         /*if (col.gameObject.tag == "Object")
-        {
+        {   
             GameManager.Singleton.RemoveObject(col.gameObject);
         }
         if (col.gameObject.tag == "Death")
