@@ -1,13 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class CheckCollision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Object")
+        switch (col.gameObject.tag){
+            case "Object":
+                GameManager.Singleton.RemoveObject(col.gameObject);
+                break;
+            case "Death":
+                GameManager.Singleton.Rebirth();
+                break;
+            case "Exit":
+                GameManager.Singleton.NextScene();
+                break;
+        }
+        /*if (col.gameObject.tag == "Object")
         {
             GameManager.Singleton.RemoveObject(col.gameObject);
         }
@@ -17,7 +27,7 @@ public class CheckCollision : MonoBehaviour {
         }
         if (col.gameObject.tag == "Exit")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+            
+        }*/
     }
 }
