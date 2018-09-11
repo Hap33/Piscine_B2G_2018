@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 136911254390615064}
   - component: {fileID: 114091069705950420}
   - component: {fileID: 114406144628115478}
+  - component: {fileID: 114017433059975562}
   m_Layer: 0
   m_Name: ThirdPersonController
   m_TagString: Player
@@ -2678,6 +2679,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114017433059975562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1194280999026044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69bb37d04a3f9347a760eff21d39fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114091069705950420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2700,7 +2712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
+  m_MovingTurnSpeed: 460
   m_StationaryTurnSpeed: 180
   m_JumpPower: 7
   m_GravityMultiplier: 1.55
@@ -2723,7 +2735,7 @@ MonoBehaviour:
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
   m_MoveSpeed: 10
-  m_TurnSpeed: 1
+  m_TurnSpeed: 4
   m_TurnSmoothing: 0
   m_TiltMax: 75
   m_TiltMin: 45
