@@ -24,7 +24,7 @@ public class Pumpkin : MonoBehaviour {
 
     void Update () {
         //Rotate the pumpkin
-        this.transform.RotateAround(this.transform.position, Vector3.up, rotationSpeed);
+        this.transform.RotateAround(this.transform.position, Vector3.up, rotationSpeed * Time.timeScale);
 
         //Move the pumpkin up and down
         if (this.transform.position.y > hooveUp)
@@ -32,7 +32,7 @@ public class Pumpkin : MonoBehaviour {
         else if (this.transform.position.y < hooveDown) 
             hooveDir = 1;
 
-        this.GetComponent<Rigidbody>().velocity = new Vector3(0, hooveDir * hooveringSpeed, 0);
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0, hooveDir * hooveringSpeed * Time.timeScale, 0);
     }
     
     private void OnTriggerEnter(Collider other)
