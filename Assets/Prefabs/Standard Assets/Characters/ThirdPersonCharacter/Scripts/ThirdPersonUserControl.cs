@@ -58,7 +58,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 m_Move = v*m_CamForward + h*m_Cam.right;
             }
             else
-            {
+            { 
                 // we use world-relative directions in the case of no main camera
                 m_Move = v*Vector3.forward + h*Vector3.right;
             }
