@@ -8,7 +8,7 @@ public class CheckCollision : MonoBehaviour {
     {
         switch (col.gameObject.tag){
             case "Object":
-                GameManager.Singleton.RemoveObject(col.gameObject);
+                //GameManager.Singleton.RemoveObject(col.gameObject);
                 break;
             case "Death":
                 GameManager.Singleton.Respawn();

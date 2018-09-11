@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour {
 
     private void Start()
     {
+        ObjectsCollected = 0;
         ExitDoor.SetActive(false);
     }
 
