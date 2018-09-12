@@ -28,6 +28,8 @@ namespace UnityStandardAssets.Cameras
 		private Quaternion m_PivotTargetRot;
 		private Quaternion m_TransformTargetRot;
 
+        public bool Respawn = false;
+
         protected override void Awake()
         {
             base.Awake();
@@ -80,6 +82,11 @@ namespace UnityStandardAssets.Cameras
             m_LookAngle += x*m_TurnSpeed;
 
             // Rotate the rig (the root object) around Y axis only:
+            if (Respawn)
+            {
+                Respawn = false;
+                m_LookAngle = 0f;
+            }
             m_TransformTargetRot = Quaternion.Euler(0f, m_LookAngle, 0f);
 
             if (m_VerticalAutoReturn)
