@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
             else if (!MenuPauseState)
             {
                 MenuPauseState = true;
+                Ethan.GetComponent<CheckCollision>().Underwater = false;
                 Time.timeScale = 0;
                 MenuPause.SetActive(true);
             }

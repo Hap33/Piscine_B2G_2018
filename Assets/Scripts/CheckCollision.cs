@@ -6,6 +6,7 @@ public class CheckCollision : MonoBehaviour {
 
     public bool Underwater = false;
     private float MoveY;
+    private float MoveX;
     private void OnCollisionEnter(Collision col)
     {
         switch (col.gameObject.tag){
@@ -38,16 +39,17 @@ public class CheckCollision : MonoBehaviour {
     private void FixedUpdate()
     {
         MoveY = Input.GetAxis("Vertical");
-        if (MoveY > 0 && Underwater == true)
+        MoveX = Input.GetAxis("Horizontal");
+        if ((MoveX != 0 || MoveY != 0) && Underwater == true)
         {
-            GetComponent<Rigidbody>().velocity = Camera.main.transform.forward*4f;
+            GetComponent<Rigidbody>().velocity = gameObject.transform.forward*3f+Camera.main.transform.forward*4f;
         }
-        if (MoveY == 0 && Underwater == true)
+        if (MoveY == 0 && MoveX == 0 && Underwater == true)
         {
             GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Water")
         {
