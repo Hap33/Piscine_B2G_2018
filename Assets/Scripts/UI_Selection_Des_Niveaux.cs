@@ -52,4 +52,21 @@ public class UI_Selection_Des_Niveaux : MonoBehaviour {
         EventSystemAccueil.SetActive(true);
         UI_MenuAccueil.SetActive(true);
     }
+
+    public void OnClickJouer()
+    {
+        Source.PlayOneShot(sonBouton);
+        gameObject.SetActive(false);
+        EventSystemAccueil.SetActive(false);
+        EventSystemSelec.SetActive(true);
+        GameManagerObject.SetActive(true);
+        UI_MenuSelection.SetActive(true);
+    }
+
+    public void OnClickQuitter()
+    {
+        Source.PlayOneShot(sonBouton);
+        Application.Quit();
+        Debug.Log("Quitter fait");
+    }
 }
