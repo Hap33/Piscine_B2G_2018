@@ -24,6 +24,6 @@ public class UIManagerPause : MonoBehaviour {
 
     public void Exit()
     {
-        Debug.Log("Vous avez quitté l'application !");
+        SceneManager.LoadScene("Main_Menu");
     }
 }

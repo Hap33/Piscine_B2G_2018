@@ -10,6 +10,6 @@ public class Timer_Ecran_Fin : MonoBehaviour {
 	void Update () {
         timer -= Time.deltaTime;
         if (timer <= 0.0f)
-            SceneManager.LoadScene("Menu Selection des niveaux");
+            SceneManager.LoadScene("Main_Menu");
 	}
 }
