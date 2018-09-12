@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33055675606253706}
   - component: {fileID: 23588129074018584}
   m_Layer: 0
-  m_Name: anneau
+  m_Name: treeStump_round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
