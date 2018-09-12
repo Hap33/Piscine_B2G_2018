@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour {
     public GameObject EthanSpawn;
     public GameObject[] AllCollectibles;
     public GameObject MenuPause;
+    public AudioSource Collect;
+    public AudioSource CollectAll;
+    public AudioSource Die;
 
     private bool MenuPauseState;
 
@@ -33,6 +36,10 @@ public class GameManager : MonoBehaviour {
     private void Start()
     {
         Respawn();
+
+        Collect = GetComponent<AudioSource>();
+        CollectAll = GetComponent<AudioSource>();
+        Die = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -64,6 +71,7 @@ public class GameManager : MonoBehaviour {
         EthanCam.GetComponent<FreeLookCam>().Respawn = true; //Marche pas !
         Ethan.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ObjectsCollected = 0;
+        Die.Play();
 
         //Deactivate the exit door
         ExitDoor.SetActive(false);
@@ -76,11 +84,13 @@ public class GameManager : MonoBehaviour {
     {
         objectToRemove.SetActive(false);
         ObjectsCollected += 1;
+        Collect.Play();
 
         //Opens the door once all objects are collected
         if (ObjectsCollected == ObjectTotal)
         {
             ExitDoor.SetActive(true);
+            CollectAll.Play();
         }
     }
 
