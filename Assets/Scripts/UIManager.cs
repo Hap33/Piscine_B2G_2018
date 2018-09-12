@@ -6,21 +6,13 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
 
     public GameObject canvas;
+    public Text p_Count;
+    public Image greenDoor, blackDoor;
 
-    private GameManager gm;
-    private Text p_Count;
-    private Image greenDoor;
-
-    private void Start()
+    public void UpdateCount(string nbCollected, string nbTotal)
     {
-        gm = GameManager.Singleton;
-        p_Count = canvas.GetComponentInChildren<Text>();
-        greenDoor = canvas.transform.GetChild(1).gameObject.GetComponent<Image>();
-    }
-
-    public void UpdateCount()
-    {
-        p_Count.text = gm.ObjectsCollected.ToString() + "/" + gm.ObjectTotal.ToString(); //Bug NullReferenceException: Object reference not set to an instance of an object - ça marche malgré l'érreur
+        Debug.Log(p_Count.ToString());
+        p_Count.text = nbCollected + "/" + nbTotal;
     }
 
     public void SetGreenDoor(bool state)

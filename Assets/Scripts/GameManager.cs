@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Respawn();
+        //Respawn();
     }
 
     private void Update()
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         //Reset Ethan position and velocity, reset the count of collectibles
         Ethan.transform.position = EthanSpawn.transform.position;
         Ethan.transform.localRotation = Quaternion.identity;
-        EthanCam.GetComponent<FreeLookCam>().Respawn = true; //Marche pas !
+        EthanCam.GetComponent<FreeLookCam>().Respawn = true;
         Ethan.GetComponent<Rigidbody>().velocity = Vector3.zero;
         ObjectsCollected = 0;
 
@@ -71,7 +71,8 @@ public class GameManager : MonoBehaviour
         ExitDoor.SetActive(false);
 
         //Reset the UI
-        UIManager.UpdateCount();
+        //Debug.Log(ObjectsCollected.ToString() + " | " + ObjectTotal.ToString());
+        UIManager.UpdateCount(ObjectsCollected.ToString(), ObjectTotal.ToString());
         UIManager.SetGreenDoor(false);
 
         ExitMenuPause();
@@ -90,7 +91,7 @@ public class GameManager : MonoBehaviour
         }
 
         //Reset the UI
-        UIManager.UpdateCount();
+        UIManager.UpdateCount(ObjectsCollected.ToString(), ObjectTotal.ToString());
     }
 
     public void LoadNextScene()

@@ -9,7 +9,7 @@ public class UIManagerPause : MonoBehaviour {
 
     private void Start()
     {
-        gm = FindObjectOfType<GameManager>();
+        gm = GameManager.Singleton;
     }
 
     public void Resume()
