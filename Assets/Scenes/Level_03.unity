@@ -7421,18 +7421,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1815397570969454, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4484582410756800, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 102.61201
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978771130927616, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1910318702 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1815397570969454, guid: 11402d5f3982d8047923431dc7f05089,
+  m_CorrespondingSourceObject: {fileID: 1978771130927616, guid: 11402d5f3982d8047923431dc7f05089,
     type: 2}
   m_PrefabInternal: {fileID: 1910318701}
 --- !u!1001 &1910504875
