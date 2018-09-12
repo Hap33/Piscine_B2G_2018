@@ -26,12 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_04.unity
     guid: 96ede4f7cf254a746af5063f18fb6664
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_05_Tom.unity
     guid: a9a5362c86953f14186759b82fabb05b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level_05.unity
-    guid: 8278aaf6107172f44aab01bffa3aab68
+    guid: a03a10aad785d2440b0e5a16c88240c6
   - enabled: 1
     path: Assets/Scenes/End_Menu.unity
     guid: 34a2c4121cae1f6449d734e3133d9255
