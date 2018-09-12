@@ -3437,10 +3437,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2034623330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee31c90d1a044c47b5ea0d6ef18226f, type: 3}
+  m_Script: {fileID: 11500000, guid: 011978ed23babe7409ebae1e68aee23c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 2034623330}
+  UI_MenuSelection: {fileID: 1834430793}
+  GameManagerObject: {fileID: 1971968852}
+  EventSystemSelec: {fileID: 1762486218}
+  EventSystemAccueil: {fileID: 370319592}
+  UI_MenuAccueil: {fileID: 2034623330}
+  Source: {fileID: 534669906}
+  sonBouton: {fileID: 8300000, guid: 1288c2797e1605e499a6ea1a08f0c6e7, type: 3}
 --- !u!114 &2034623333
 MonoBehaviour:
   m_ObjectHideFlags: 0
