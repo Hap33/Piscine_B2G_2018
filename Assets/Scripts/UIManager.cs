@@ -17,5 +17,6 @@ public class UIManager : MonoBehaviour {
     public void SetGreenDoor(bool state)
     {
         greenDoor.gameObject.SetActive(state);
+        blackDoor.gameObject.SetActive(!state);
     }
 }
