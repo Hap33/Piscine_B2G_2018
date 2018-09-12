@@ -13,14 +13,14 @@ public class UIManager : MonoBehaviour {
 
     private void Start()
     {
-        gm = FindObjectOfType<GameManager>();
+        gm = GameManager.Singleton;
         p_Count = canvas.GetComponentInChildren<Text>();
         greenDoor = canvas.transform.GetChild(1).gameObject.GetComponent<Image>();
     }
 
     public void UpdateCount()
     {
-        p_Count.text = gm.ObjectsCollected + "/" + gm.ObjectTotal; //Bug NullReferenceException: Object reference not set to an instance of an object - ça marche malgré l'érreur
+        p_Count.text = gm.ObjectsCollected.ToString() + "/" + gm.ObjectTotal.ToString(); //Bug NullReferenceException: Object reference not set to an instance of an object - ça marche malgré l'érreur
     }
 
     public void SetGreenDoor(bool state)
