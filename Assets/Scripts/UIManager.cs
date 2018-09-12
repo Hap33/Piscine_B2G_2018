@@ -1,35 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
-    public GameObject GameManager;
-    public GameObject UI_MenuSelecNiveaux;
-    public GameObject EventSystemSelec;
-    public GameObject EventSystemAccueil;
-    public AudioSource Source;
-    public AudioClip sonBouton;
-    
-    void Start () {
-		
-	}
+    public GameObject canvas;
 
-    public void OnClickJouer()
+    private GameManager gm;
+    private Text p_Count;
+    private Image greenDoor;
+
+    private void Start()
     {
-        Source.PlayOneShot(sonBouton);
-        gameObject.SetActive(false);
-        EventSystemAccueil.SetActive(false);
-        EventSystemSelec.SetActive(true);
-        GameManager.SetActive(true);
-        UI_MenuSelecNiveaux.SetActive(true);
+        gm = FindObjectOfType<GameManager>();
+        p_Count = canvas.GetComponentInChildren<Text>();
+        greenDoor = canvas.transform.GetChild(1).gameObject.GetComponent<Image>();
     }
 
-    public void OnClickQuitter()
+    public void UpdateCount()
     {
-        Source.PlayOneShot(sonBouton);
-        Application.Quit();
-        Debug.Log("Quitter fait");
+        p_Count.text = gm.ObjectsCollected + "/" + gm.ObjectTotal; //Bug NullReferenceException: Object reference not set to an instance of an object - ça marche malgré l'érreur
+    }
+
+    public void SetGreenDoor(bool state)
+    {
+        greenDoor.gameObject.SetActive(state);
     }
 }
