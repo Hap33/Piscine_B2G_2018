@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour {
         ExitDoor.SetActive(false);
 
         ExitMenuPause();
+        
     }
 
     public void RemoveObject (GameObject objectToRemove)
@@ -98,6 +99,16 @@ public class GameManager : MonoBehaviour {
         MenuPauseState = false;
         Time.timeScale = 1;
         MenuPause.SetActive(false);
+    }
+
+    void OnEnabled()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Ethan.GetComponent<CheckCollision>().Underwater = false;
     }
 }
         

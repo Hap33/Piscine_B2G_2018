@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckCollision : MonoBehaviour {
 
-    private bool Underwater = false;
+    public bool Underwater = false;
     private float MoveY;
     private void OnCollisionEnter(Collision col)
     {
@@ -64,5 +64,4 @@ public class CheckCollision : MonoBehaviour {
             Physics.gravity = new Vector3(0, -9.8f, 0);
         }
     }
-    
 }
