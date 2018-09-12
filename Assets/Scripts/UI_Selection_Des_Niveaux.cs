@@ -28,7 +28,7 @@ public class UI_Selection_Des_Niveaux : MonoBehaviour {
     public void OnClickButton03()
     {
         Source.PlayOneShot(sonBouton);
-        SceneManager.LoadScene("Level_03");
+        SceneManager.LoadScene("Level_03_LD");
     }
 
     public void OnClickButton04()
