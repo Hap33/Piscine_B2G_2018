@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour {
 
     public void UpdateCount(string nbCollected, string nbTotal)
     {
-        Debug.Log(p_Count.ToString());
         p_Count.text = nbCollected + "/" + nbTotal;
     }
 
