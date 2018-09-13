@@ -8393,6 +8393,11 @@ Prefab:
       propertyPath: m_TagString
       value: ExitBonus
       objectReference: {fileID: 0}
+    - target: {fileID: 135756554112472856, guid: d33f67fa69798a6488a51be667561778,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114699938382984450, guid: d33f67fa69798a6488a51be667561778, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d33f67fa69798a6488a51be667561778, type: 2}
