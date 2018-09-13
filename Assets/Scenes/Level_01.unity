@@ -6749,6 +6749,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c431a624c459549b6c07cda01ad224, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &781024409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114266142499487428, guid: 08c431a624c459549b6c07cda01ad224,
+    type: 2}
+  m_PrefabInternal: {fileID: 781024408}
+  m_Script: {fileID: 11500000, guid: 93bc980b279717340a20a050929c31b4, type: 3}
 --- !u!1001 &782631837
 Prefab:
   m_ObjectHideFlags: 0
@@ -15591,6 +15597,11 @@ Prefab:
       propertyPath: UIManager
       value: 
       objectReference: {fileID: 129379259}
+    - target: {fileID: 114026108920542752, guid: 18adf0ff98783244fbe6944a19260b95,
+        type: 2}
+      propertyPath: SoundManager
+      value: 
+      objectReference: {fileID: 781024409}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18adf0ff98783244fbe6944a19260b95, type: 2}
   m_IsPrefabAsset: 0
