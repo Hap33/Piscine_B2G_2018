@@ -157,14 +157,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1815397570969454, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1978771130927616, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11402d5f3982d8047923431dc7f05089, type: 2}
   m_IsPrefabAsset: 0
@@ -8251,31 +8243,6 @@ Prefab:
     - target: {fileID: 4710747581508838, guid: fde6b6fc27dba2d4ead2b1d921c525cf, type: 2}
       propertyPath: m_RootOrder
       value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 114406144628115478, guid: fde6b6fc27dba2d4ead2b1d921c525cf,
-        type: 2}
-      propertyPath: m_MoveSpeedMultiplier
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114406144628115478, guid: fde6b6fc27dba2d4ead2b1d921c525cf,
-        type: 2}
-      propertyPath: m_MovingTurnSpeed
-      value: 460
-      objectReference: {fileID: 0}
-    - target: {fileID: 114406144628115478, guid: fde6b6fc27dba2d4ead2b1d921c525cf,
-        type: 2}
-      propertyPath: m_StationaryTurnSpeed
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 114700137371642096, guid: fde6b6fc27dba2d4ead2b1d921c525cf,
-        type: 2}
-      propertyPath: m_TurnSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114700137371642096, guid: fde6b6fc27dba2d4ead2b1d921c525cf,
-        type: 2}
-      propertyPath: Respawn
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114017433059975562, guid: fde6b6fc27dba2d4ead2b1d921c525cf,
         type: 2}
