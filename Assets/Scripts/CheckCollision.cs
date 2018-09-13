@@ -22,6 +22,12 @@ public class CheckCollision : MonoBehaviour {
             case "Exit":
                 GameManager.Singleton.LoadNextScene();
                 break;
+            case "ExitBonus":
+                GameManager.Singleton.LoadScene("Secret_project");
+                break;
+            case "BackToLevel":
+                GameManager.Singleton.LoadScene("Level_04");
+                break;
             /*case "Water":
                 Debug.Log("Dans L'eau"); 
                 break;*/

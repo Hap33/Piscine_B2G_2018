@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End_Menu.unity
     guid: 34a2c4121cae1f6449d734e3133d9255
+  - enabled: 1
+    path: Assets/Scenes/Secret_project.unity
+    guid: e7b0dc5f6fbc13e4c808d3ed0917869f
   - enabled: 0
     path: Assets/Scenes/Scene_Prog.unity
     guid: 93d62a1e91d8d3741b954b22f19b2379
