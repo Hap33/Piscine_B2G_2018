@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RecoltePumpkin: {fileID: 8300000, guid: 0fb68c4f262e7ca4e8fd8424b32cd4c8, type: 3}
   DrapeauActive: {fileID: 8300000, guid: f09c76c29c32c6c4db954c5d8d4a3043, type: 3}
-  Death: {fileID: 8300000, guid: b88c5a783db833c45a981cd06bdaaee9, type: 3}
+  Death: {fileID: 8300000, guid: 448693b40f9a3d64fa35ead27b45542e, type: 3}

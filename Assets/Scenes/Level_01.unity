@@ -8232,6 +8232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Underwater: 0
+  SoundManager: {fileID: 781024409}
 --- !u!1001 &1103014009
 Prefab:
   m_ObjectHideFlags: 0

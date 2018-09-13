@@ -56,8 +56,6 @@ public class GameManager : MonoBehaviour
 
     public void Respawn()
     {
-        //Play Death Sound
-        Ethan.GetComponent<AudioSource>().PlayOneShot(SoundManager.Death);
         //Deactive all collectibles
         for (int i = 0; i < AllCollectibles.Length; i++)
         {
