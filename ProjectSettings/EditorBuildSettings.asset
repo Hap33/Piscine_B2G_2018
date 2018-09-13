@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: 09d6fe4e87ec1654caba836463176286
   - enabled: 1
     path: Assets/Scenes/Level_04.unity
-    guid: 96ede4f7cf254a746af5063f18fb6664
+    guid: 8192a5ebc0ea77c47911c6bc5361bf0a
   - enabled: 0
     path: Assets/Scenes/Level_05_Tom.unity
     guid: a9a5362c86953f14186759b82fabb05b
