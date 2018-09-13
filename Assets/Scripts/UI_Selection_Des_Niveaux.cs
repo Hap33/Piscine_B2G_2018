@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class UI_Selection_Des_Niveaux : MonoBehaviour {
 
-    public GameObject UI_MenuSelection;
+    /*public GameObject UI_MenuSelection;
     public GameObject GameManagerObject;
     public GameObject EventSystemSelec;
     public GameObject EventSystemAccueil;
-    public GameObject UI_MenuAccueil;
+    public GameObject UI_MenuAccueil;*/
     public AudioSource Source;
     public AudioClip sonBouton;
+
+    public int[] tabMenu;
 
     public void OnClickButton01()
     {
@@ -46,21 +48,21 @@ public class UI_Selection_Des_Niveaux : MonoBehaviour {
     public void OnClickButtonAccueil()
     {
         Source.PlayOneShot(sonBouton);
-        UI_MenuSelection.SetActive(false);
+        /*UI_MenuSelection.SetActive(false);
         GameManagerObject.SetActive(false);
         EventSystemSelec.SetActive(false);
         EventSystemAccueil.SetActive(true);
-        UI_MenuAccueil.SetActive(true);
+        UI_MenuAccueil.SetActive(true);*/
     }
 
     public void OnClickJouer()
     {
         Source.PlayOneShot(sonBouton);
-        gameObject.SetActive(false);
+        /*gameObject.SetActive(false);
         EventSystemAccueil.SetActive(false);
         EventSystemSelec.SetActive(true);
         GameManagerObject.SetActive(true);
-        UI_MenuSelection.SetActive(true);
+        UI_MenuSelection.SetActive(true);*/
     }
 
     public void OnClickQuitter()
