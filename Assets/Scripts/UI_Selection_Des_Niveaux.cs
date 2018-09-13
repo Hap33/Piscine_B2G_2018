@@ -40,7 +40,7 @@ public class UI_Selection_Des_Niveaux : MonoBehaviour {
     public void OnClickButton05()
     {
         Source.PlayOneShot(sonBouton);
-        SceneManager.LoadScene("Level_05_Tom");
+        SceneManager.LoadScene("Level_05");
     }
 
     public void OnClickButtonAccueil()
