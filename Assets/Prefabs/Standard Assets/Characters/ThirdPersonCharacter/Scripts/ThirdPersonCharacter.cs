@@ -51,7 +51,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
                 {
-                    transform.Translate(transform.forward*0.1f, Space.World);
+                    transform.Translate(transform.forward*0.01f, Space.World);
                 }
             }
         }
