@@ -42,8 +42,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
+        /*private void FixedUpdate()
+        {
+            if (!m_IsGrounded)
+            {
+                m_Rigidbody.velocity = new Vector3(In * 25, m_Rigidbody.velocity.y, Input.GetAxis("Vertical") * 25);
+            }
+        }*/
 
-		public void Move(Vector3 move, bool crouch, bool jump)
+
+        public void Move(Vector3 move, bool crouch, bool jump)
 		{
 
 			// convert the world relative moveInput vector into a local-relative
@@ -65,8 +73,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			else
 			{
-				HandleAirborneMovement();
-			}
+                HandleAirborneMovement();
+            }
 
 			ScaleCapsuleForCrouching(crouch);
 			PreventStandingInLowHeadroom();
@@ -124,7 +132,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_Animator.SetBool("OnGround", m_IsGrounded);
 			if (!m_IsGrounded)
 			{
-				m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+                m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+
 			}
 
 			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
@@ -158,8 +167,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// apply extra gravity from multiplier:
 			Vector3 extraGravityForce = (Physics.gravity * m_GravityMultiplier) - Physics.gravity;
 			m_Rigidbody.AddForce(extraGravityForce);
+            //m_Rigidbody.AddForce(Input.GetAxis("Horizontal") * 25f, m_Rigidbody.velocity.y, Input.GetAxis("Vertical") * 25f);
 
-			m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+            m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
 		}
 
 
@@ -217,7 +227,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else
 			{
 				m_IsGrounded = false;
-				m_GroundNormal = Vector3.up;
+				m_GroundNormal = /*Vector3.up*/hitInfo.normal;
 				m_Animator.applyRootMotion = false;
 			}
 		}
