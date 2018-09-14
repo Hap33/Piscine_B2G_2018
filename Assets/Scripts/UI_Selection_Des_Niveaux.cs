@@ -8,11 +8,6 @@ public class UI_Selection_Des_Niveaux : MonoBehaviour {
     public AudioSource Source;
     public AudioClip sonBouton;
 
-    protected void HandlePointerExitAndEnter(EventSystems.PointerEventData currentPointerData, GameObject newEnterTarget)
-    {
-
-    }
-
     public void OnClickButtonChangeScene(string sceneLoadName)
     {
         Source.PlayOneShot(sonBouton);
