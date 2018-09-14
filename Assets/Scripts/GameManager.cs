@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] AllCollectibles;
     public GameObject MenuPause;
     public UIManager UIManager;
+    public SoundManager SoundManager;
 
     private bool MenuPauseState;
 
@@ -84,11 +85,15 @@ public class GameManager : MonoBehaviour
         objectToRemove.SetActive(false);
         ObjectsCollected += 1;
 
+        //Play Collected sound
+        Ethan.GetComponent<AudioSource>().PlayOneShot(SoundManager.RecoltePumpkin);
+
         //Opens the door once all objects are collected
         if (ObjectsCollected == ObjectTotal)
         {
             ExitDoor.SetActive(true);
             UIManager.SetGreenDoor(true);
+            Ethan.GetComponent<AudioSource>().PlayOneShot(SoundManager.DrapeauActive);
         }
 
         //Reset the UI

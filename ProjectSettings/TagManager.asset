@@ -8,6 +8,9 @@ TagManager:
   - Death
   - Exit
   - Water
+  - Landmark
+  - ExitBonus
+  - BackToLevel
   layers:
   - Default
   - TransparentFX

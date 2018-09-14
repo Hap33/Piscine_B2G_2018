@@ -7,6 +7,7 @@ public class CheckCollision : MonoBehaviour {
     public bool Underwater = false;
     private float MoveY;
     private float MoveX;
+    public SoundManager SoundManager;
     private void OnCollisionEnter(Collision col)
     {
         switch (col.gameObject.tag){
@@ -15,9 +16,17 @@ public class CheckCollision : MonoBehaviour {
                 break;
             case "Death":
                 GameManager.Singleton.Respawn();
+                //Play Death Sound
+                GetComponent<AudioSource>().PlayOneShot(SoundManager.Death);
                 break;
             case "Exit":
                 GameManager.Singleton.LoadNextScene();
+                break;
+            case "ExitBonus":
+                GameManager.Singleton.LoadScene("Secret_project");
+                break;
+            case "BackToLevel":
+                GameManager.Singleton.LoadScene("Level_04");
                 break;
             /*case "Water":
                 Debug.Log("Dans L'eau"); 
