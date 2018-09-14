@@ -42,13 +42,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
-        /*private void FixedUpdate()
+        private void FixedUpdate()
         {
+            Debug.Log(transform.forward);
             if (!m_IsGrounded)
             {
-                m_Rigidbody.velocity = new Vector3(In * 25, m_Rigidbody.velocity.y, Input.GetAxis("Vertical") * 25);
+                if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+                {
+                    m_Rigidbody.AddForce(transform.forward * 15f);
+                }
             }
-        }*/
+        }
 
 
         public void Move(Vector3 move, bool crouch, bool jump)
@@ -136,12 +140,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			}
 
-			// calculate which leg is behind, so as to leave that leg trailing in the jump animation
-			// (This code is reliant on the specific run cycle offset in our animations,
-			// and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
-			float runCycle =
-				Mathf.Repeat(
-					m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime + m_RunCycleLegOffset, 1);
+            // calculate which leg is behind, so as to leave that leg trailing in the jump animation
+            // (This code is reliant on the specific run cycle offset in our animations,
+            // and assumes one leg passes the other at the normalized clip times of 0.0 and 0.5)
+            float runCycle = -1f;
+				/*Mathf.Repeat(
+					m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime *0f+ m_RunCycleLegOffset, 1);*/
 			float jumpLeg = (runCycle < k_Half ? 1 : -1) * m_ForwardAmount;
 			if (m_IsGrounded)
 			{
