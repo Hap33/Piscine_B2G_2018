@@ -8,5 +8,6 @@ public class NoMouse : MonoBehaviour {
     {
         DontDestroyOnLoad(gameObject);
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
