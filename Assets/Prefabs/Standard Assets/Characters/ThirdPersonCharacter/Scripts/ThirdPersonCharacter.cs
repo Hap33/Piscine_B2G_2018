@@ -28,10 +28,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
+        bool m_IsInWater;
 
 
 		void Start()
 		{
+            
 			m_Animator = GetComponent<Animator>();
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Capsule = GetComponent<CapsuleCollider>();
@@ -44,7 +46,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void FixedUpdate()
         {
-            if (!m_IsGrounded)
+            m_IsInWater = gameObject.GetComponent<CheckCollision>().Underwater;
+            if (!m_IsGrounded && !m_IsInWater)
             {
                 if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
                 {
