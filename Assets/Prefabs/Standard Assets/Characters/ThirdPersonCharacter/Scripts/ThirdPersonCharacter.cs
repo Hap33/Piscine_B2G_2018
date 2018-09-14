@@ -44,12 +44,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void FixedUpdate()
         {
-            Debug.Log(transform.forward);
             if (!m_IsGrounded)
             {
                 if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
                 {
-                    m_Rigidbody.AddForce(transform.forward * 15f);
+                    transform.Translate(transform.forward*0.1f, Space.World);
                 }
             }
         }
